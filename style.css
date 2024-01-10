@@ -13,7 +13,59 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 html {
@@ -22,17 +74,21 @@ html {
   font-size: 100%;
 }
 body {
+  display: flex;
   margin: 0;
   font-family: var(--body-font-family);
   background-color: var(--body-bg);
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  position: absolute;
+  /* position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+
   width: 22rem;
   background-color: var(--card-bg);
   border-radius: 1rem;
@@ -42,18 +98,20 @@ body {
   width: 100%;
   height: auto;
   border-radius: 1rem;
+  margin-bottom: 1rem;
 }
 .title {
   font-size: 1.5rem;
   padding: 0 1rem;
   font-weight: 700;
   color: var(--dark-blue);
+  text-transform: capitalize;
 }
 .subtitle {
+  margin: 1rem;
   font-weight: 400;
   padding: 0 1rem;
   color: var(--text-color);
-  margin-bottom: 1.5rem;
 }
 
 @media only screen and (max-width: 370px) {
