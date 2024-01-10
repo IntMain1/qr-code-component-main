@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+:root {
+  /* Colors */
+  --body-bg: hsl(212, 45%, 89%);
+  --card-bg: hsl(0, 0%, 100%);
+  --text-color: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+
+  /* Fonts */
+  --body-font-family: "Outfit", sans-serif;
+}
+/* GENERAL CSS */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--body-font-family);
+  background-color: var(--body-bg);
+  text-align: center;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 22rem;
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+.title {
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+.subtitle {
+  font-weight: 400;
+  padding: 0 1rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 370px) {
+  html {
+    font-size: 80%;
+  }
+  .container {
+    width: 88%;
+  }
+  .title {
+    font-size: 1.7rem;
+    padding: 0 1.9rem;
+  }
+  .subtitle {
+    padding: 0 2.7rem;
+  }
+}
